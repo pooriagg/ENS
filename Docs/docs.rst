@@ -13,6 +13,16 @@ ENS Document
             string calldata _domain,
             address _recepient
         ) external;
+        
+        function userToDomain(address _user) external view returns(string calldata);
+        
+        function domainToUser(string calldata _domain) external view returns(address);
+        
+        function isExists(string calldata _domain) external view returns(bool);
+        
+        function hasDomain(address _user) external view returns(bool);
+        
+        function domainCounter() external view returns(uint);
     }
 
 ---------------------------------------------------------------------------------
@@ -48,3 +58,78 @@ Prameters
 ---------
 1. ``_domain`` - ``string``: The domain name .
 2. ``_recepient`` - ``address``: The recepient address .
+
+---------------------------------------------------------------------------------
+
+Find user owned domain
+======================
+Can get the user's domain (if exists!) by calling ``userToDomain`` .
+
+---------
+Prameters
+---------
+1. ``_user`` - ``address``: The user address .
+
+-------
+Returns
+-------
+1. ``string``: The user's domain name .
+
+---------------------------------------------------------------------------------
+
+Find domain's owner
+======================
+Can get the domain's owner (if exists!) by calling ``domainToUser`` .
+
+---------
+Prameters
+---------
+1. ``_domain`` - ``string``: The domain name .
+
+-------
+Returns
+-------
+1. ``address``: The domain's owner address .
+
+---------------------------------------------------------------------------------
+
+Check domain existence
+======================
+If a domain has a owner it will return ``true`` otherwise ``false`` .
+
+---------
+Prameters
+---------
+1. ``_domain`` - ``string``: The domain' name .
+
+-------
+Returns
+-------
+1. ``bool``: The domain status .
+
+---------------------------------------------------------------------------------
+
+Check a user ownership
+======================
+If a a user has a domain it will return ``true`` otherwise ``false`` .
+
+---------
+Prameters
+---------
+1. ``_user`` - ``address``: The user address .
+
+-------
+Returns
+-------
+1. ``bool``: The user ownership status .
+
+---------------------------------------------------------------------------------
+
+Get total domains count
+=======================
+Calling ``domainCounter`` will returns total created domains count .
+
+-------
+Returns
+-------
+1. ``uint256``: Total created domain count until now .
