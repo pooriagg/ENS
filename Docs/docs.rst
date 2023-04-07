@@ -29,6 +29,11 @@ ENS Document
 
 Create a domain
 ===============
+
+.. code-block:: solidity
+    
+    function createDomain(string calldata _domain) external;
+
 User can create a domain by calling the ``createDomain`` .
 
 ---------
@@ -40,6 +45,12 @@ Prameters
 
 Destroy a domain
 ================
+
+.. code-block:: solidity
+    
+    function destroyDomain(string calldata _domain) external;
+
+
 User can destroy his/her domain via ``destroyDomain`` .
 
 ---------
@@ -51,6 +62,15 @@ Prameters
 
 Transfer a domain
 =================
+
+.. code-block:: solidity
+    
+        function transferDomain(
+            string calldata _domain,
+            address _recepient
+        ) external;
+
+
 User can transfer his/her domain via calling ``transferDomain`` .
 
 ---------
@@ -63,6 +83,12 @@ Prameters
 
 Find user owned domain
 ======================
+
+.. code-block:: solidity
+    
+    function userToDomain(address _user) external view returns(string calldata);
+
+
 Can get the user's domain (if exists!) by calling ``userToDomain`` .
 
 ---------
@@ -79,6 +105,12 @@ Returns
 
 Find domain's owner
 ======================
+
+.. code-block:: solidity
+    
+    function domainToUser(string calldata _domain) external view returns(address);
+
+
 Can get the domain's owner (if exists!) by calling ``domainToUser`` .
 
 ---------
@@ -95,6 +127,12 @@ Returns
 
 Check domain existence
 ======================
+
+.. code-block:: solidity
+    
+    function isExists(string calldata _domain) external view returns(bool);
+
+
 If a domain has a owner it will return ``true`` otherwise ``false`` .
 
 ---------
@@ -111,6 +149,12 @@ Returns
 
 Check a user ownership
 ======================
+
+.. code-block:: solidity
+    
+    function hasDomain(address _user) external view returns(bool);
+
+
 If a a user has a domain it will return ``true`` otherwise ``false`` .
 
 ---------
@@ -127,6 +171,12 @@ Returns
 
 Get total domains count
 =======================
+
+.. code-block:: solidity
+    
+    function domainCounter() external view returns(uint);
+
+
 Calling ``domainCounter`` will returns total created domains count .
 
 -------
