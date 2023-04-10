@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useCallback, useContext, useEffect } from "react";
+import React, { useState, useCallback, useContext, useEffect } from "react";
 import { toast } from "react-toastify";
 
 import Web3FullInfo from "../context/Web3FullInfo";
