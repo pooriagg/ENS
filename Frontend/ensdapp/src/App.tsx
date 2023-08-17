@@ -21,13 +21,13 @@ const App: React.FunctionComponent = (): JSX.Element => {
   
   // const web3Https = useMemo(() => new Web3(
   //   new Web3.providers.HttpProvider(
-  //     "https://polygon-mumbai.g.alchemy.com/v2/7d3CawiE6tv5NwqMVvTCyrVL6jGRiK8X"
+  //     "<API_KEY>"
   //   )
   // ), []);
 
   const web3Wss = useMemo(() => new Web3(
     new Web3.providers.WebsocketProvider(
-      "wss://polygon-mumbai.g.alchemy.com/v2/7d3CawiE6tv5NwqMVvTCyrVL6jGRiK8X"
+      "<API_KEY>"
     )
   ), []);
 
